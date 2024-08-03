@@ -8,4 +8,14 @@ public class Config {
      * MOZILLA
      * */
     public static final String BROWSER = "CHROME";
+
+    /**
+     *  Clear browser cookies and local storage (after each test)
+     * */
+    public static final Boolean CLEAR_COOKIES = true;
+
+    /**
+     * Keep browser open after all tests/scenario
+     * */
+    public static final Boolean HOLD_BROWSER_OPEN = false;
 }
