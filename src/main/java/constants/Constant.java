@@ -8,5 +8,7 @@ public class Constant {
 
     public static class Urls {
         public static final String INSURANCE_URL = "https://www.bankofcyprus.com/en-gb/Personal/insurance/";
+        public static final String DIGITAL_CHANNELS_URL = "https://www.bankofcyprus.com/en-gb/Personal/Digital_Channels/";
+        public  static final String LOANS_URL = "https://www.bankofcyprus.com/en-gb/Personal/loans/";
     }
 }

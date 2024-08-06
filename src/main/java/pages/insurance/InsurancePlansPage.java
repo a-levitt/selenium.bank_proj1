@@ -16,7 +16,7 @@ public class InsurancePlansPage extends BasePage {
     //https://www.bankofcyprus.com/en-gb/Personal/Digital_Channels/hidden/qr-code-home-insurance/
     // ?nextScreen=home_insurance&utm_source=SM&utm_medium=SM&utm_campaign=Home
 
-    private final By getProposalButton = By.xpath(" (//a[@class='current-accounts-overlay-link'])[2]");
+    private final By getProposalButton = By.xpath("(//a[@class='current-accounts-overlay-link'])[2]");
     private final By mobileAppRedirectButton = By.xpath("//a[@class='bp-image-banner-btn animated']");
 
     public InsurancePlansPage getHomeInsurance() {
