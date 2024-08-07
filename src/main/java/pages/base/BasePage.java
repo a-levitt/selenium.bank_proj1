@@ -48,7 +48,7 @@ public class BasePage {
     public void isRestorePasswordPopupVisible() {
         WebElement restorePasswordForm = driver.findElement(passwordForm);
         waitForElement(restorePasswordForm);
-        WebElement title = driver.findElement(popUpTitleText);
+        String title = driver.findElement(popUpTitleText).getText();
         Assertions.assertEquals("One Time Password (OTP) Generator", title);
     }
 }
