@@ -2,7 +2,6 @@ package tests.digital.positive;
 
 import org.junit.jupiter.api.Test;
 import pages.digital.DigitalChannelsPage;
-import pages.insurance.InsurancePlansPage;
 import tests.base.BaseTest;
 import constants.Constant.Urls;
 
