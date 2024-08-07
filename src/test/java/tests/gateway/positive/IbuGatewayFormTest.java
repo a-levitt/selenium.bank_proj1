@@ -16,7 +16,7 @@ public class IbuGatewayFormTest extends BaseTest {
                                             .enterPassword(Secure.formFillVariables.USER_PASSWORD)
                                             .clickForgotPassword();
 
-        basePage.restorePassword();
+        basePage.isRestorePasswordPopupVisible();
     }
 
 }

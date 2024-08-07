@@ -1,5 +1,6 @@
 package pages.base;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,6 +21,7 @@ public class BasePage {
 
     public final By MobileAppQR = By.xpath("//div[@class='time-check-wrap animated']");
     public final By passwordForm = By.xpath("//mat-dialog-container[@id='mat-dialog-1']");
+    public final By popUpTitleText = By.xpath("//mat-card-title[@class='mat-card-title']");
 
     /**
      * Navigate to specific URL
@@ -43,8 +45,10 @@ public class BasePage {
         waitForElement(qrCode);
     }
 
-    public void restorePassword() {
+    public void isRestorePasswordPopupVisible() {
         WebElement restorePasswordForm = driver.findElement(passwordForm);
         waitForElement(restorePasswordForm);
+        WebElement title = driver.findElement(popUpTitleText);
+        Assertions.assertEquals("One Time Password (OTP) Generator", title);
     }
 }

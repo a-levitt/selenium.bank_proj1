@@ -12,7 +12,7 @@ public class Config {
     /**
      *  Clear browser cookies and local storage (after each test)
      * */
-    public static final Boolean CLEAR_COOKIES = true;
+    public static final Boolean CLEAR_COOKIES = false;
 
     /**
      * Keep browser open after all tests/scenario
