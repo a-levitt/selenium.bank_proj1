@@ -3,9 +3,7 @@ package pages.digital;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.base.BasePage;
-import pages.insurance.InsurancePlansPage;
 
-import java.util.prefs.BackingStoreException;
 
 public class DigitalChannelsPage extends BasePage {
     public DigitalChannelsPage(WebDriver driver) {

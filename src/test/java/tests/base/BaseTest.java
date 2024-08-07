@@ -9,8 +9,11 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import pages.base.BasePage;
-import pages.insurance.InsurancePage;
-import pages.loans.LoansPage;
+import pages.digital.DigitalPage;
+//import pages.digital.DigitalChannelsPage;
+//import pages.digital.DigitalPage;
+//import pages.insurance.InsurancePage;
+//import pages.gateway.IbuGatewayPage;
 
 import static common.Config.CLEAR_COOKIES;
 import static common.Config.HOLD_BROWSER_OPEN;
@@ -20,8 +23,9 @@ import static common.Config.HOLD_BROWSER_OPEN;
 public class BaseTest {
     protected WebDriver driver = CommonActions.createDriver();
     protected BasePage basePage = new BasePage(driver);
-    protected InsurancePage insurancePage = new InsurancePage(driver);
-    protected LoansPage loansPage = new LoansPage(driver);
+    //protected InsurancePage insurancePage = new InsurancePage(driver);
+    //protected DigitalPage digitalPage = new DigitalPage(driver);
+    //protected IbuGatewayPage ibuGatewayPage = new IbuGatewayPage(driver);
 
     @AfterEach
     void clearCookiesAndLocalStorage() {

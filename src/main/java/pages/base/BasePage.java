@@ -19,6 +19,7 @@ public class BasePage {
     }
 
     public final By MobileAppQR = By.xpath("//div[@class='time-check-wrap animated']");
+    public final By passwordForm = By.xpath("//mat-dialog-container[@id='mat-dialog-1']");
 
     /**
      * Navigate to specific URL
@@ -40,5 +41,10 @@ public class BasePage {
     public void isQRCodeDisplayed() {
         WebElement qrCode = driver.findElement(MobileAppQR);
         waitForElement(qrCode);
+    }
+
+    public void restorePassword() {
+        WebElement restorePasswordForm = driver.findElement(passwordForm);
+        waitForElement(restorePasswordForm);
     }
 }
