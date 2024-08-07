@@ -18,4 +18,9 @@ public class Config {
      * Keep browser open after all tests/scenario
      * */
     public static final Boolean HOLD_BROWSER_OPEN = false;
+
+    /**
+     * Clear old screenshots before starting the build
+     * */
+    public static final Boolean CLEAR_REPORTS = false;
 }

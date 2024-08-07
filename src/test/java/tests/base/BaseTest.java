@@ -9,15 +9,18 @@ import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pages.base.BasePage;
-import pages.digital.DigitalPage;
 //import pages.digital.DigitalChannelsPage;
 //import pages.digital.DigitalPage;
 //import pages.insurance.InsurancePage;
 //import pages.gateway.IbuGatewayPage;
 
-import static common.Config.CLEAR_COOKIES;
-import static common.Config.HOLD_BROWSER_OPEN;
+import java.io.File;
+import java.util.Objects;
+
+import static common.Config.*;
 
 @ExtendWith(Listener.class)
 @Execution(ExecutionMode.CONCURRENT)
@@ -28,6 +31,25 @@ public class BaseTest {
     //protected InsurancePage insurancePage = new InsurancePage(driver);
     //protected DigitalPage digitalPage = new DigitalPage(driver);
     //protected IbuGatewayPage ibuGatewayPage = new IbuGatewayPage(driver);
+    private static final Logger LOGGER = LoggerFactory.getLogger(BaseTest.class);
+
+    static {
+        if (CLEAR_REPORTS) {
+            File allureResults = new File("allure-results");
+            File failedScreenshots = new File("build/reports/tests");
+            if (allureResults.isDirectory()) {
+                for (File item : Objects.requireNonNull(allureResults.listFiles())) {
+                    item.delete();
+                }
+            }
+            for (File screenshot : Objects.requireNonNull(failedScreenshots.listFiles())) {
+                screenshot.delete();
+            }
+
+            LOGGER.info("Old screenshots and reports deleted");
+        }
+    }
+
 
     @AfterEach
     void clearCookiesAndLocalStorage() {
