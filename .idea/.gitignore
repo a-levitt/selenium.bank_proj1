@@ -3,3 +3,6 @@
 /workspace.xml
 /src/main/resources/*
 src/main/java/constants/Secure.java
+build/reports/tests
+allure-results
+
